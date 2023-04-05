@@ -1,0 +1,44 @@
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+td {
+  border: 1px solid black;
+  text-align: center;
+  color: goldenrod;
+}
+th {
+  border: 1px solid black;
+}
+td img {
+  width: 80px;
+}
+
+td button {
+  border: 1px solid goldenrod;
+  background-color: black;
+  color: goldenrod;
+  margin: 2px;
+  padding: 3px;
+  text-transform: capitalize;
+}
+td button:hover {
+  border: 1px solid goldenrod;
+  background-color: white;
+  color: goldenrod;
+  margin: 2px;
+  padding: 3px;
+  text-transform: capitalize;
+}
+
+input {
+  text-align: center;
+  padding: 0 5px;
+}

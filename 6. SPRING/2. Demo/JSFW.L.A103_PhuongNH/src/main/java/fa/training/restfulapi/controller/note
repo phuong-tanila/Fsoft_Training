@@ -1,0 +1,128 @@
+Dao (interface) : những chức năng cần làm --> Service(implement DAO): hiện thực các chức năng --> Controller(viết API để gọi) 
+
+Spring: IoC, MVC, DI, SpringBoot, JPA
+
+Servlet, JSP, so sánh forward(), include(), sendRedirect()
+
+sercurity theo session, token,...
+
+--SPRING
+Spring là một framework phổ biến trong lập trình Java, nó giúp đơn giản hóa việc phát triển các ứng dụng Java và giúp tăng tính bảo mật và độ tin cậy của các ứng dụng.
+
+Một số khái niệm quan trọng trong Spring:
+
+IoC (Inversion of Control): IoC là một kiểu thiết kế phần mềm trong đó các đối tượng không phụ thuộc vào nhau mà được quản lý bởi một bên thứ ba. IoC làm cho việc kiểm soát và bảo trì ứng dụng dễ dàng hơn.
+
+DI (Dependency Injection): DI là một kỹ thuật được sử dụng trong Spring để cung cấp các phụ thuộc cho các đối tượng. Spring sử dụng DI để loại bỏ các phụ thuộc tĩnh và giúp cho các đối tượng có thể được thay đổi hoặc tái sử dụng dễ dàng hơn.
+
+AOP (Aspect-Oriented Programming): AOP là một kiểu thiết kế phần mềm để tách riêng các khía cạnh khác nhau của chương trình. AOP được sử dụng để thực hiện các chức năng như ghi log, đo thời gian hoặc bảo mật.
+
+MVC (Model-View-Controller): MVC là một kiểu thiết kế kiến trúc phần mềm được sử dụng trong Spring để tách riêng các tầng khác nhau của ứng dụng.
+
+Spring cung cấp các module và công cụ hỗ trợ cho phát triển ứng dụng web và ứng dụng di động, trong đó có Spring Core, Spring MVC, Spring Security, Spring Data, Spring Boot và nhiều module khác.
+
+Spring cũng cung cấp các API cho các tính năng như JDBC, ORM, JMS, và các công nghệ khác để giúp quản lý và tương tác với cơ sở dữ liệu.
+
+Tóm lại, Spring là một framework Java mạnh mẽ, nó giúp cho việc phát triển ứng dụng Java dễ dàng hơn, cũng như tăng độ bảo mật và độ tin cậy của các ứng dụng.
+
+--IoC
+Spring IoC (Inversion of Control) là một kiểu thiết kế phần mềm trong đó các đối tượng không phụ thuộc vào nhau mà được quản lý bởi một bên thứ ba. Trong Spring IoC, các đối tượng không tự tạo ra các phụ thuộc của chúng mà nó sẽ được Spring Container tạo ra và quản lý.
+
+Việc này giúp loại bỏ các phụ thuộc tĩnh trong các đối tượng và giúp cho các đối tượng có thể được thay đổi hoặc tái sử dụng dễ dàng hơn. Điều này giúp tăng tính linh hoạt và dễ dàng bảo trì trong quá trình phát triển ứng dụng.
+
+Spring IoC cũng cung cấp Dependency Injection (DI) để cung cấp các phụ thuộc cho các đối tượng. Spring DI cho phép các đối tượng được chèn các phụ thuộc vào bên trong của chúng thông qua các trường, phương thức, hoặc constructor. Điều này giúp tăng tính linh hoạt và dễ dàng tái sử dụng trong quá trình phát triển ứng dụng.
+
+Ngoài ra, Spring IoC còn hỗ trợ việc tạo các bean (đối tượng) và quản lý các bean này thông qua các file cấu hình XML, Annotations hoặc Java Code. Các bean này được lưu trữ trong Spring Container và có thể được sử dụng bởi các đối tượng khác trong ứng dụng.
+
+Tóm lại, Spring IoC giúp loại bỏ các phụ thuộc tĩnh trong các đối tượng và giúp cho việc tái sử dụng và bảo trì dễ dàng hơn trong quá trình phát triển ứng dụng.
+
+--DI
+Spring DI (Dependency Injection) là một kỹ thuật được sử dụng trong Spring để cung cấp các phụ thuộc cho các đối tượng. Trong Spring DI, các đối tượng không tạo ra các phụ thuộc của chúng, mà nó sẽ nhận các phụ thuộc này thông qua constructor, phương thức hoặc trường từ bên ngoài.
+
+Việc này giúp loại bỏ các phụ thuộc tĩnh trong các đối tượng và giúp cho các đối tượng có thể được thay đổi hoặc tái sử dụng dễ dàng hơn. Điều này giúp tăng tính linh hoạt và dễ dàng bảo trì trong quá trình phát triển ứng dụng.
+
+Spring DI cung cấp cho chúng ta các cơ chế để inject các phụ thuộc vào các đối tượng, bao gồm:
+
+Constructor Injection: sử dụng constructor để inject các phụ thuộc vào đối tượng.
+Setter Injection: sử dụng setter method để inject các phụ thuộc vào đối tượng.
+Field Injection: sử dụng trường để inject các phụ thuộc vào đối tượng.
+Ngoài ra, Spring DI còn hỗ trợ các cơ chế khác để inject các phụ thuộc như Autowiring, Annotation-based DI và Java Configuration.
+
+Tóm lại, Spring DI giúp loại bỏ các phụ thuộc tĩnh trong các đối tượng và giúp cho việc tái sử dụng và bảo trì dễ dàng hơn trong quá trình phát triển ứng dụng. Các phụ thuộc có thể được inject vào đối tượng thông qua các constructor, phương thức hoặc trường, bằng nhiều cách khác nhau như Autowiring, Annotation-based DI hoặc Java Configuration.
+
+--MVC
+Spring MVC (Model-View-Controller) là một framework của Spring được sử dụng để phát triển các ứng dụng web Java. Nó giúp tách biệt các lớp mô hình, xử lý và hiển thị của ứng dụng web để tăng tính linh hoạt và dễ bảo trì.
+
+Các thành phần chính của Spring MVC bao gồm:
+
+Model: là lớp đại diện cho dữ liệu trong ứng dụng và được sử dụng để truyền dữ liệu giữa Controller và View. Model thường được đóng gói vào một Java Bean.
+
+View: là lớp đại diện cho phần giao diện người dùng của ứng dụng và được sử dụng để hiển thị dữ liệu cho người dùng. View có thể được hiển thị dưới nhiều định dạng khác nhau, bao gồm HTML, XML, JSON,..
+
+Controller: là lớp xử lý yêu cầu từ người dùng và điều hướng tới Model để lấy dữ liệu, sau đó chuyển đến View để hiển thị dữ liệu. Controller cũng thường được sử dụng để thực hiện các xử lý nghiệp vụ và chuyển đổi dữ liệu giữa các định dạng khác nhau.
+
+Spring MVC cung cấp một số chức năng như:
+
+URL mapping: cho phép các yêu cầu HTTP được điều hướng đến các Controller tương ứng dựa trên URL được yêu cầu.
+Data binding: cho phép dữ liệu được tự động chuyển đổi sang định dạng mong muốn của người dùng.
+Validation: cho phép xác thực dữ liệu đầu vào từ người dùng để đảm bảo tính toàn vẹn và độ chính xác của dữ liệu.
+Exception handling: cho phép xử lý các ngoại lệ trong ứng dụng một cách thông minh.
+Tóm lại, Spring MVC là một framework phát triển ứng dụng web Java, sử dụng mô hình MVC để tách biệt các lớp mô hình, xử lý và hiển thị của ứng dụng. Nó cung cấp nhiều chức năng để hỗ trợ phát triển ứng dụng web, bao gồm URL mapping, Data binding, Validation và Exception handling.
+
+
+--Spring Core
+Spring Core là một phần quan trọng trong Spring Framework, cung cấp khả năng quản lý các đối tượng (objects) và tạo ra sự phụ thuộc giữa chúng trong ứng dụng Java. Mục tiêu chính của Spring Core là cung cấp cho các lập trình viên một cách để tạo ra các đối tượng trong ứng dụng của họ một cách dễ dàng hơn, đồng thời giúp quản lý sự phụ thuộc giữa các đối tượng.
+
+Spring Core được xây dựng xung quanh 2 khái niệm quan trọng: IoC (Inversion of Control) và Dependency Injection (DI). IoC là một mô hình thiết kế cho phép tách biệt việc thiết kế và triển khai ứng dụng, trong khi DI là một kỹ thuật được sử dụng để cung cấp cho các đối tượng tất cả các phụ thuộc của chúng thông qua các phương thức hoặc constructor.
+
+Spring Core cung cấp nhiều tính năng và công cụ để thực hiện việc quản lý các đối tượng và sự phụ thuộc, bao gồm:
+
+ApplicationContext: là một container cho phép quản lý các đối tượng và sự phụ thuộc giữa chúng. ApplicationContext sử dụng các tệp cấu hình để tạo ra các đối tượng trong ứng dụng.
+
+Bean: là một đối tượng được tạo ra bởi Spring và được quản lý bởi ApplicationContext.
+
+BeanFactory: là một container cho phép quản lý các đối tượng và sự phụ thuộc giữa chúng, tương tự như ApplicationContext.
+
+Dependency Injection: là kỹ thuật cung cấp các phụ thuộc của một đối tượng thông qua các phương thức hoặc constructor. Spring Core cung cấp nhiều cách để thực hiện DI, bao gồm constructor injection, setter injection và field injection.
+
+AOP (Aspect-Oriented Programming): là một kỹ thuật lập trình cho phép tách biệt các khía cạnh khác nhau của ứng dụng như logging, caching và security. Spring Core cung cấp tính năng AOP để thực hiện các khía cạnh này một cách dễ dàng.
+
+Tóm lại, Spring Core là phần quan trọng của Spring Framework cung cấp khả năng quản lý các đối tượng và tạo ra sự phụ thuộc giữa chúng trong ứng dụng Java. Nó sử dụng mô hình IoC và DI để tạo ra sự tách biệt giữa thiết kế và triển khai ứng dụng. Nó cung cấp nhiều tính năng và công
+
+--Spring Data
+Spring Data là một phần của Spring Framework giúp tạo ra các lớp repository dễ sử dụng để thao tác với cơ sở dữ liệu. Spring Data giúp giảm bớt phần lớn code boilerplate và tạo ra một cách dễ dàng để tương tác với cơ sở dữ liệu.
+
+Spring Data cung cấp một số module cho các cơ sở dữ liệu phổ biến như JPA, MongoDB, Redis, Cassandra, Neo4j, và nhiều hơn nữa. Mỗi module sẽ có các tính năng và cách sử dụng khác nhau tùy theo loại cơ sở dữ liệu mà nó hỗ trợ.
+
+Một số tính năng của Spring Data bao gồm:
+
+Repository interface: Spring Data tạo ra các interface repository để tương tác với cơ sở dữ liệu một cách dễ dàng hơn, thay vì phải viết code boilerplate. Các interface này cung cấp các phương thức CRUD (Create, Read, Update, Delete) và các phương thức tùy chỉnh khác cho các thao tác với cơ sở dữ liệu.
+
+Pagination: Spring Data cung cấp các tính năng phân trang cho việc lấy dữ liệu từ cơ sở dữ liệu, giúp giảm bớt số lượng dữ liệu trả về và tăng tốc độ thời gian phản hồi.
+
+Query creation: Spring Data cho phép tạo các truy vấn động đến cơ sở dữ liệu dựa trên tên phương thức của repository, giúp giảm bớt việc phải viết các truy vấn SQL hoặc JPQL một cách thủ công.
+
+Integration with Spring Framework: Spring Data tích hợp tốt với Spring Framework và cho phép sử dụng các tính năng khác như DI, AOP, và transactio.
+
+Compatibility with different database providers: Spring Data hỗ trợ nhiều loại cơ sở dữ liệu phổ biến như MongoDB, Redis, Cassandra, và Neo4j. Nó cũng hỗ trợ các cơ sở dữ liệu quan hệ như MySQL, PostgreSQL, và Oracle.
+
+Tóm lại, Spring Data là một phần của Spring Framework giúp tạo ra các lớp repository dễ sử dụng để thao tác với cơ sở dữ liệu. Nó cung cấp các tính năng và công cụ để giảm bớt code boilerplate và tạo ra một cách dễ dàng để tương tác với cơ sở dữ liệu. Nó tích hợp tốt với Spring Framework và hỗ trợ nhiều loại cơ sở dữ liệu phổ biến.
+
+--Spring Boot
+Spring Boot là một phần mở rộng của Spring Framework, giúp tạo ra các ứng dụng Java nhanh chóng và dễ dàng. Nó cung cấp một số tính năng để giảm bớt công sức cho việc cấu hình và triển khai ứng dụng Spring.
+
+Các tính năng chính của Spring Boot bao gồm:
+
+Auto-configuration: Spring Boot có thể tự động cấu hình các bean cho ứng dụng, tùy theo các thư viện và framework được sử dụng. Điều này giúp giảm bớt việc cấu hình thủ công và tăng tốc độ phát triển.
+
+Embedded web server: Spring Boot cung cấp một số web server như Tomcat, Jetty, và Undertow để triển khai ứng dụng Spring. Các web server này được tích hợp sẵn trong Spring Boot và có thể được sử dụng mà không cần cài đặt riêng.
+
+Starter dependencies: Spring Boot cung cấp các starter dependencies để giảm bớt việc cấu hình và phát triển ứng dụng Spring. Những starter này có thể được sử dụng để thêm các tính năng như web, JPA, MongoDB, thư viện giao tiếp với cơ sở dữ liệu, và nhiều hơn nữa.
+
+Production-ready features: Spring Boot cung cấp các tính năng và công cụ để triển khai và quản lý ứng dụng Spring trong môi trường sản xuất, bao gồm cấu hình, quản lý log, và giám sát.
+
+Integration with Spring Framework: Spring Boot tích hợp tốt với Spring Framework và cho phép sử dụng các tính năng khác như DI, AOP, và transaction.
+
+Tóm lại, Spring Boot giúp tạo ra các ứng dụng Java nhanh chóng và dễ dàng. Nó cung cấp các tính năng và công cụ để giảm bớt công sức cho việc cấu hình và triển khai ứng dụng Spring. Nó tích hợp tốt với Spring Framework và cung cấp các tính năng để triển khai và quản lý ứng dụng trong môi trường sản xuất.
+
+--

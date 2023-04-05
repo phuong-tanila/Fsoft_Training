@@ -1,0 +1,53 @@
+table {
+  border: 0.5px dotted black;
+}
+td {
+  border: 0.5px dotted black;
+  color: goldenrod;
+}
+th {
+  border: 0.5px dotted black;
+  text-align: left;
+  font-family: sans-serif;
+  font-size: 13px;
+  padding: 8px 3px;
+}
+.table-image {
+  width: 70px;
+}
+
+.quantity {
+  border: 0.5px dotted black;
+  border-radius: 10%;
+  width: 50px;
+  margin: 0;
+}
+
+.minus {
+  border: 0.5px dotted black;
+  border-radius: 10%;
+  padding: 2px 10px;
+  color: white;
+  background-color: gray;
+  margin: 0;
+}
+
+.add {
+  border: 0.5px dotted black;
+  border-radius: 10%;
+  padding: 2px 10px;
+  background-color: rgb(194, 239, 239);
+  margin: 0;
+}
+.delete {
+  border: 0.5px dotted black;
+  border-radius: 10%;
+  padding: 2px 10px;
+  color: white;
+  background-color: red;
+  margin: 0;
+}
+
+.tfoot-total {
+  text-align: right;
+}

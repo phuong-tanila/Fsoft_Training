@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	<bean id="emp1" class="fa.training.bean.Employee">
+		<property name="empId" value="1" />
+		<property name="empName" value="Jack" />
+		<property name="address" value="NewYork City" />
+	</bean>
+
+	<bean id="emp2" class="fa.training.bean.Employee">
+		<property name="empId" value="2" />
+		<property name="empName" value="Jennie" />
+		<property name="address" value="NewYork City" />
+	</bean>
+</beans>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice 1</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      table {
+        margin: 0 auto;
+        height: max-content;
+        width: 55rem;
+      }
+      tr {
+        text-align: center;
+      }
+      .acc {
+        width: 6rem;
+        font-weight: 600;
+        text-align: left;
+        padding-left: 0.8rem;
+      }
+      .gpa {
+        font-weight: 600;
+        text-align: right;
+        padding-right: 0.8rem;
+      }
+      .email {
+        width: 11rem;
+        text-align: left;
+        padding-left: 0.8rem;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th rowspan="2">Account</th>
+        <th rowspan="2">Email</th>
+        <th rowspan="2">GPA</th>
+        <th colspan="4">Quizzes</th>
+        <th colspan="2">Assignments</th>
+        <th rowspan="2">Exam</th>
+      </tr>
+      <tr>
+        <!-- <th></th>
+        <th></th>
+        <th></th> -->
+        <th>Quiz 1</th>
+        <th>Quiz 2</th>
+        <th>Quiz 3</th>
+        <th>Quiz 4</th>
+        <th>Asm 1</th>
+        <th>Asm 2</th>
+        <!-- <th></th>
+        <th></th> -->
+      </tr>
+      <tr>
+        <td class="acc">LuongPD2</td>
+        <td class="email"><a href="#">LuongPD2@gmail.com</a></td>
+        <td class="gpa">0</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="acc">DucLH19</td>
+        <td class="email"><a href="#">DucLH19@gmail.com</a></td>
+        <td class="gpa">2.625</td>
+        <td>17</td>
+        <td>18</td>
+        <td>17</td>
+        <td>18</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="acc">HaiTX3</td>
+        <td class="email"><a href="#">HaiTX3@gmail.com</a></td>
+        <td class="gpa">2.55</td>
+        <td>19</td>
+        <td>16</td>
+        <td>18</td>
+        <td>15</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="acc">HaiTD9</td>
+        <td class="email"><a href="#">HaiTD9@gmail.com</a></td>
+        <td class="gpa">2.1</td>
+        <td class="quizz">16</td>
+        <td class="quizz">12</td>
+        <td class="quizz">14</td>
+        <td class="quizz">14</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="acc">KhanhPV6</td>
+        <td class="email"><a href="#">KhanhPV6@gmail.com</a></td>
+        <td class="gpa">0</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="acc">SonPT35</td>
+        <td class="email"><a href="#">SonPT35@gmail.com</a></td>
+        <td class="gpa">2.5125</td>
+        <td>17</td>
+        <td>17</td>
+        <td>17</td>
+        <td>16</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="acc">LuanNK2</td>
+        <td class="email"><a href="#">LuanNK2@gmail.com</a></td>
+        <td class="gpa">2.475</td>
+        <td>20</td>
+        <td>17</td>
+        <td>15</td>
+        <td>14</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="acc">TrangVM</td>
+        <td class="email"><a href="#">TrangVM@gmail.com</a></td>
+        <td class="gpa">2.5875</td>
+        <td>17</td>
+        <td>16</td>
+        <td>20</td>
+        <td>16</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="acc">SonD2</td>
+        <td class="email"><a href="#">SonD2@gmail.com</a></td>
+        <td class="gpa">2.775</td>
+        <td>17</td>
+        <td>15</td>
+        <td>17</td>
+        <td>16</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="acc">HaoLQ</td>
+        <td class="email"><a href="#">HaoLQ@gmail.com</a></td>
+        <td class="gpa">2.325</td>
+        <td>17</td>
+        <td>15</td>
+        <td>15</td>
+        <td>14</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="acc">Nam</td>
+        <td class="email"><a href="#">Nam@gmail.com</a></td>
+        <td class="gpa">1.65</td>
+        <td>18</td>
+        <td></td>
+        <td>11</td>
+        <td>15</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="acc">Hải Anh</td>
+        <td class="email"></td>
+        <td class="gpa">0.6</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>16</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </body>
+</html>

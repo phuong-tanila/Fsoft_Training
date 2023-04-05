@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.org/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://149.28.19.248:3306/filmstore_dev</property>
+		<property name="hibernate.connection.username">quan</property>
+		<property name="hibernate.connection.password">P@ssw0rd</property>
+
+		<!-- JDBC connection pool (use the built-in) -->
+		<property name="connection.pool_size">1</property>
+
+		<!-- SQL dialect -->
+		<!-- <property name="hibernate.dialect">org.dialect.SQLServerDialect</property> -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+		<!-- Echo all executed SQL to stdout -->
+		<property name="show_sql">true</property>
+
+		<!-- Drop and re-create the database schema on startup -->
+		<property name="hbm2ddl.auto">update</property>
+
+		<property 	name="hibernate.cache.use_second_level_cache">true</property>
+		<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+		<property name="hibernate.cache.use_query_cache" >true</property>
+<!--		<property name="net.sf.ehcache.configurationResourceName">/myehcache.xml</property>-->
+
+		<mapping class="fa.training.entities.User" />
+	</session-factory>
+
+</hibernate-configuration>

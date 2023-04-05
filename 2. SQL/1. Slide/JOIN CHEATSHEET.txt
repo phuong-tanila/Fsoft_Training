@@ -1,0 +1,22 @@
+- inner join: chỉ lấy phần chung của hai bảng A và B
+
+- outer join: lấy phần của chính nó và phần chung
+	+ left join: lấy toàn bộ record ở bảng A và phần chung của A và B.
+			Phần nào A có mà B ko có thì gán NULL.
+	+ right join: lấy toàn bộ record ở bảng B và phần chung của B và A.
+			Phần nào B có mà A ko có thì gán NULL.
+	+ full join: lấy toàn bộ record của A và B.
+			Phần nào A có mà B ko có thì gán NULL.
+			Phần nào B có mà A ko có thì gán NULL.
+
+- cross join: ko quan tâm  relationship
+- self join: join với chính nó
+
+EXCLUDING JOIN:
++ left join: chỉ lấy toàn bộ record ở bảng A. Phần chung của A và B KHÔNG LẤY. (WHERE B = null)
+			Phần nào A có mà B ko có thì gán NULL.
++ right join: chỉ lấy toàn bộ record ở bảng B. Phần chung của B và A KHÔNG LẤY. (WHERE A = null)
+			Phần nào B có mà A ko có thì gán NULL.
++ full join: lấy toàn bộ record của A và B. Không lấy phần chung (WHERE A = null AND B = null)
+			Phần nào A có mà B ko có thì gán NULL.
+			Phần nào B có mà A ko có thì gán NULL.

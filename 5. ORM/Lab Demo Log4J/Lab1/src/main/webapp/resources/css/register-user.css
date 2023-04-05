@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+body {
+	text-align: center;
+}
+
+label {
+	width: 100%;
+	text-align: right;
+}
+.row{
+	margin-bottom: 10px;
+}

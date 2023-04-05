@@ -1,0 +1,144 @@
+.logo {
+  width: 80px;
+}
+.link {
+  padding-top: 30px;
+}
+.link a {
+  text-decoration: none;
+  font-size: large;
+  font-weight: 500;
+  color: black;
+}
+.topbtn {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.topnav {
+  font-size: 17px;
+  background-color: #282a35;
+  color: #f1f1f1;
+  letter-spacing: 1px;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 10px;
+}
+.topnav a {
+  text-decoration: none;
+  color: #f1f1f1;
+  padding: 10px 9px;
+}
+.sidebar {
+  height: 900px;
+  width: 100%;
+  background-color: #e7e9eb;
+  overflow-y: scroll;
+}
+
+.nextprev a.w3-right,
+.nextprev a.w3-left {
+  background-color: #04aa6d;
+  color: #ffffff;
+  border-color: #04aa6d;
+}
+.nextprev a:link,
+.nextprev a:visited {
+  background-color: #ffffff;
+  color: #000000;
+}
+.w3-btn,
+.w3-btn:link,
+.w3-btn:visited {
+  color: #ffffff;
+  background-color: #4caf50;
+}
+.nextprev a {
+  font-size: 18px;
+  font-family: "Source Sans Pro", sans-serif;
+  padding-left: 19px;
+  padding-right: 19px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+}
+.w3-clear {
+  display: block;
+  margin-bottom: 100px;
+}
+.w3-left {
+  float: left !important;
+}
+.w3-right {
+  float: right !important;
+}
+.w3-btn,
+.w3-button {
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+a {
+  color: black;
+}
+
+#footer {
+  padding: 32px;
+  border-top: 1px solid #f1f1f1;
+}
+.w3-white,
+.w3-hover-white:hover {
+  color: #000 !important;
+  background-color: #fff !important;
+}
+.w3-container,
+.w3-panel {
+  padding: 0.01em 16px;
+}
+.w3-center {
+  text-align: center !important;
+}
+.w3-small {
+  font-size: 12px !important;
+}
+
+element.style {
+  white-space: nowrap;
+  text-decoration: none;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  font-size: 17px;
+  font-family: Source Sans Pro, sans-serif;
+}
+.w3-btn,
+.w3-btn:link,
+.w3-btn:visited {
+  color: #ffffff;
+  background-color: #4caf50;
+}
+.footer a {
+  text-decoration: none;
+}
+.ws-black {
+  background-color: #282a35 !important;
+  color: white !important;
+}
+.w3-round,
+.w3-round-medium {
+  border-radius: 4px;
+}
+.w3-block {
+  display: inline;
+}
+
+.abc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

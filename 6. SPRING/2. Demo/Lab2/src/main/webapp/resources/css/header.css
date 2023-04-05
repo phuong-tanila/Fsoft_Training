@@ -1,0 +1,14 @@
+@charset "UTF-8";
+.container{
+	display: flex;
+	background-color: black;
+}
+
+ul.navbar-nav{
+	display: flex;
+	flex-direction: row;
+}
+
+a{
+	margin-right: 10px;
+}

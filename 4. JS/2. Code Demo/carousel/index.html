@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://kit.fontawesome.com/330a21053c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="container">
+        <div class="wrapper">
+            <button class="prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
+            <ul class="slides">
+                <li class="slide">
+                    <img src="https://storage-asset.msi.com/global/picture/banner/banner_165362242259e0a3f7f24ec103495415403dcbcbaf.jpeg"
+                        alt="">
+                </li>
+                <li class="slide">
+                    <img src="https://storage-asset.msi.com/global/picture/banner/banner_16672871594ec4a9b0107d7dbc52b8b5e7611b5906.jpeg"
+                        alt="">
+                </li>
+                <li class="slide">
+                    <img src="https://storage-asset.msi.com/global/picture/banner/banner_1666604544571f396a5d6bac4e3b65865838dd80ea.jpeg"
+                        alt="">
+                </li>
+            </ul>
+            <div class="dots">
+                <!-- <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div> -->
+            </div>
+        </div>
+
+    </section>
+
+</body>
+<script>
+    const slides = document.querySelectorAll('.slide')
+    const prevButton = document.querySelector('.prev')
+    const nextButton = document.querySelector('.next')
+    const dots = document.querySelector('.dots')
+    //currentSlide nằm ở phạm vi global scope nên mọi thứ sẽ tác động nó nếu gọi
+    let currentSlide = 0
+    console.log(currentSlide)
+
+    //lùi
+    prevButton.addEventListener('click', () => {
+        resetAutoPlay()
+        if (currentSlide <= 0) {
+            nextSlide(slides.length - 1)
+            return;
+        }
+        currentSlide--
+        nextSlide(currentSlide)
+    })
+    //next
+    nextButton.addEventListener('click', () => {
+        resetAutoPlay()
+        if (currentSlide >= slides.length - 1) {
+            nextSlide(0)
+            //next khi ở slide cuối => về slide đầu => currentSlide = 0 return (không chạy phạm vi ngoài của block scope if)
+            return;
+        }
+        console.log(currentSlide)
+
+        currentSlide++
+        nextSlide(currentSlide)
+    })
+    //set up slide đầu active và dot đầu active
+    function init() {
+        slides[0].classList.add('active')
+        createDots()
+
+    }
+
+    //next slide với đối số cần truyền là vị trí slide next
+    function nextSlide(slideNumber) {
+        currentSlide = slideNumber
+        setActiveClass()
+    }
+    //handle set và remove active class của slide và dot
+    function setActiveClass() {
+        //lấy cái slide đã được active và remove nó
+        let currentActiveSlide = document.querySelector('.slide.active')
+        currentActiveSlide.classList.remove('active')
+        //slide tại vị trí current slide thêm active
+        slides[currentSlide].classList.add('active')
+
+        let currentActiveDot = document.querySelector('.dot.active')
+        currentActiveDot.classList.remove('active')
+        dots.children[currentSlide].classList.add('active')
+    }
+
+    //tạo dots theo length slides
+    function createDots() {
+        //tạo dot dựa theo length của slides
+        for (let i = 0; i < slides.length; i++) {
+            const dot = document.createElement('div')
+            dot.classList.add('dot')
+            //nhét vào thẻ div class dots đã có ở html
+            dots.appendChild(dot)
+            //mỗi dot được sở hữu 1 event click 
+            dot.addEventListener('click', () => {
+                //vị trí của dot = vị trí của slide => 
+                nextSlide(i)
+                resetAutoPlay()
+            })
+        }
+        //set up dot index 0 active vì slide index 0 cũng active lúc bắt đầu
+        dots.children[0].classList.add('active')
+    }
+
+    let autoplay = null
+
+    function autoplaySlides() {
+        autoplay = setInterval(function () {
+            //sau 2s => active slide index 1
+            //nếu ko + 1 thì ta phải đợi active slide index 0 sau đó mới active slide index 1 => đợi 4s => ngu
+            let slideNextToCurrentSlide = currentSlide + 1
+            if (slideNextToCurrentSlide > slides.length - 1) {
+                slideNextToCurrentSlide = 0
+            }
+            nextSlide(slideNextToCurrentSlide)
+        }, 4000)
+    }
+
+
+    function resetAutoPlay() {
+        clearInterval(autoplay)
+        autoplaySlides()
+    }
+
+    //
+    autoplaySlides();
+    init();
+
+
+
+</script>
+
+</html>

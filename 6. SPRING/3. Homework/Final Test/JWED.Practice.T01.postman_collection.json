@@ -1,0 +1,575 @@
+{
+	"info": {
+		"_postman_id": "c55df7fc-6679-4b5e-90ca-898a0bca2de4",
+		"name": "JWED.Practice.T01",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25871683"
+	},
+	"item": [
+		{
+			"name": "trainee-register-account",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"trainee_account\": \"admin\",\r\n    \"password\": \"12345\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/trainee-register?trainee_account=admin&password=12345",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"trainee-register"
+					],
+					"query": [
+						{
+							"key": "trainee_account",
+							"value": "admin"
+						},
+						{
+							"key": "password",
+							"value": "12345"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "trainee-register-account",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"trainee_account\": \"admin\",\r\n    \"password\": \"12345\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/trainee-register?trainee_account=admin&password=12345",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"trainee-register"
+							],
+							"query": [
+								{
+									"key": "trainee_account",
+									"value": "admin"
+								},
+								{
+									"key": "password",
+									"value": "12345"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Feb 2023 12:40:37 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"trainee_id\": 1,\n    \"trainee_account\": \"admin\",\n    \"trainee_name\": null,\n    \"password\": \"12345\"\n}"
+				}
+			]
+		},
+		{
+			"name": "trainee-login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"trainee_account\": \"admin\",\r\n    \"password\": \"12345\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/trainee-login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"trainee-login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "trainee-login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"trainee_account\": \"admin\",\r\n    \"password\": \"12345\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/trainee-login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"trainee-login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Feb 2023 12:44:55 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"text\": \"Login successful - Please select your courses!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "update-trainee (by id)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"trainee_account\": \"admin\",\r\n    \"password\": \"12345\",\r\n    \"trainee_name\": \"DieuNT1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/update-trainee/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"update-trainee",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update-trainee (by id)",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"trainee_account\": \"admin\",\r\n    \"password\": \"12345\",\r\n    \"trainee_name\": \"DieuNT1\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/update-trainee/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"update-trainee",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Feb 2023 12:47:15 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"trainee_id\": 1,\n    \"trainee_account\": \"admin\",\n    \"trainee_name\": \"DieuNT1\",\n    \"password\": \"12345\"\n}"
+				}
+			]
+		},
+		{
+			"name": "add-course (by trainee-id)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"course_code\": \"BTJB7201\",\r\n    \"course_title\": \"basic technical Java\",\r\n    \"course_type\": \"Technical\",\r\n    \"year\": \"2023\",\r\n    \"semester\": \"Feb\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/add-course/trainee-id/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"add-course",
+						"trainee-id",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add-course (by trainee-id)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"course_code\": \"BTJB7201\",\r\n    \"course_title\": \"basic technical Java\",\r\n    \"course_type\": \"Technical\",\r\n    \"year\": \"2023\",\r\n    \"semester\": \"Feb\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/add-course/trainee-id/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"add-course",
+								"trainee-id",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Feb 2023 13:25:58 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"course_id\": 1,\n    \"course_code\": \"BTJB7201\",\n    \"course_title\": \"basic technical Java\",\n    \"course_type\": \"Technical\",\n    \"year\": 2023,\n    \"semester\": \"Feb\",\n    \"trainee\": {\n        \"trainee_id\": 1,\n        \"trainee_account\": \"admin\",\n        \"trainee_name\": \"DieuNT1\",\n        \"password\": \"12345\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "search-course (by id)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/search-course/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"search-course",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "search-course (by id)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/search-course/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"search-course",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Feb 2023 13:41:38 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"course_id\": 1,\n    \"course_code\": \"BTJB7201\",\n    \"course_title\": \"basic technical Java\",\n    \"course_type\": \"Technical\",\n    \"year\": 2023,\n    \"semester\": \"Feb\",\n    \"trainee\": {\n        \"trainee_id\": 1,\n        \"trainee_account\": \"admin\",\n        \"trainee_name\": \"DieuNT1\",\n        \"password\": \"12345\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "list-all-courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/list-course",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"list-course"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "list-all-courses",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/list-course",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"list-course"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Feb 2023 13:42:34 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"course_id\": 1,\n        \"course_code\": \"BTJB7201\",\n        \"course_title\": \"basic technical Java\",\n        \"course_type\": \"Technical\",\n        \"year\": 2023,\n        \"semester\": \"Feb\",\n        \"trainee\": {\n            \"trainee_id\": 1,\n            \"trainee_account\": \"admin\",\n            \"trainee_name\": \"DieuNT1\",\n            \"password\": \"12345\"\n        }\n    },\n    {\n        \"course_id\": 2,\n        \"course_code\": \"BTNB7301\",\n        \"course_title\": \"basic technical .NET\",\n        \"course_type\": \"Technical\",\n        \"year\": 2023,\n        \"semester\": \"Feb\",\n        \"trainee\": {\n            \"trainee_id\": 1,\n            \"trainee_account\": \"admin\",\n            \"trainee_name\": \"DieuNT1\",\n            \"password\": \"12345\"\n        }\n    },\n    {\n        \"course_id\": 3,\n        \"course_code\": \"DAY101\",\n        \"course_title\": \"Dayone for foreigner\",\n        \"course_type\": \"DAYONE\",\n        \"year\": 2023,\n        \"semester\": \"Feb\",\n        \"trainee\": {\n            \"trainee_id\": 1,\n            \"trainee_account\": \"admin\",\n            \"trainee_name\": \"DieuNT1\",\n            \"password\": \"12345\"\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "delete-course (by id)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/delete-course/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"delete-course",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete-course (by id)",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/delete-course/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"delete-course",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Feb 2023 13:43:36 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"The course has been removed\": true\n}"
+				}
+			]
+		}
+	]
+}

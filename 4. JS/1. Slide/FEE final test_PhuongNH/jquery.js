@@ -1,0 +1,124 @@
+const tbody = $("tbody");
+const calculateTotalTax = () => {
+    let totalTax = 0;
+    $(".tax").forEach((i) => {
+        totalTax += parseFloat(i.innerHTML.replace("$", ""));
+    });
+    $(".total-tax").innerHTML = totalTax;
+};
+const formatMoney = (money) => {
+    const formatter = new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+    });
+
+    return formatter.format(parseFloat(money));
+};
+const calculateCurrentTax = (currentRow) => {
+    const price = parseFloat(
+        currentRow.querySelector(".price").innerHTML.replace("$", "")
+    );
+    const quantity = parseFloat(
+        currentRow.querySelector(".input-quantity").value.replace("$", "")
+    );
+    const result = Math.round(((price * quantity * 12.5) / 100) * 1) / 1;
+    currentRow.querySelector(".tax").innerHTML = formatMoney(result);
+    return result;
+};
+const calculateCurrentTotal = (currentRow) => {
+    const tmpDiscount = parseFloat(
+        currentRow.querySelector(".discount").innerHTML.replace("$", "")
+    );
+    const discount = isNaN(tmpDiscount) ? 0 : tmpDiscount;
+    const quantity = parseFloat(
+        currentRow.querySelector(".input-quantity").value.replace("$", "")
+    );
+    const price = parseFloat(
+        currentRow.querySelector(".price").innerHTML.replace("$", "")
+    );
+    const tax = parseFloat(
+        currentRow.querySelector(".tax").innerHTML.replace("$", "")
+    );
+    currentRow.querySelector(".total").innerHTML = formatMoney(quantity * price - discount + tax);
+};
+const calculateTotalPrice = () => {
+    let totalPrice = 0;
+    let totalDiscount = 0;
+    let totalTax = 0;
+    const trEls = tbody.querySelectorAll("tr");
+    trEls.forEach(row => {
+        const currentPrice = parseFloat(
+            row.querySelector(".total").innerHTML.replace("$", "")
+        );
+        totalPrice += currentPrice;
+
+        const currentTax = parseFloat(
+            row.querySelector(".tax").innerHTML.replace("$", "")
+        );
+        totalTax += currentTax;
+
+        const tmpDiscount = parseFloat(
+            row.querySelector(".discount").innerHTML.replace("$", "")
+        );
+        const currentDiscount = isNaN(tmpDiscount) ? 0 : tmpDiscount;
+        totalDiscount += currentDiscount;
+    })
+    console.log(formatMoney(totalPrice))
+    $(".total-price").innerHTML = formatMoney(totalPrice);
+    $(".total-tax").innerHTML = formatMoney(totalTax);
+    $(".total-discount").innerHTML = formatMoney(totalDiscount);
+}
+const calculateAll = (currentRow) => {
+    if (currentRow != null) {
+        calculateCurrentTax(currentRow);
+        calculateCurrentTotal(currentRow);
+    }else{
+        console.log(1)
+    }
+    calculateTotalPrice();
+};
+const handleMinus = (el) => {
+    const inputEl = el.parentElement.querySelector("input");
+
+    if (inputEl.value == 1) return;
+    else {
+        inputEl.value -= 1;
+    }
+    calculateAll(el.parentElement.parentElement);
+};
+
+const handleAdd = (el) => {
+    const inputEl = el.parentElement.querySelector("input");
+    inputEl.value = parseInt(inputEl.value) + 1;
+    calculateAll(el.parentElement.parentElement);
+};
+const handleCancel = (el) => {
+    el.parentElement.parentElement.remove();
+    calculateAll(null);
+};
+window.addEventListener('DOMContentLoaded', () => {
+    $(".btn-minus").each(function(index) {
+        const i = this;
+        $(i).click((e) => {
+            console.log(1)
+            console.log(e);
+            handleMinus(e.currentTarget)
+        })
+    });
+    $(".btn-add").each(function(index) {
+        const i = this;
+        $(i).click((e) => {
+            handleAdd(e.currentTarget)
+        })
+    });
+    // $(".btn-cancel").each(i => {
+    //     i.addEventListener("click", (e) => {
+    //         handleCancel(e.path[0])
+    //     })
+    // })
+});
+// tdEls.forEach(i => {
+//     i.querySelector(".btn-minus").addEventListener("click", handleMinus(e));
+//     i.querySelector(".btn-add").addEventListener("click", handleAdd);
+//     i.querySelector(".btn-cancel").addEventListener("click", handleCancel);
+// })

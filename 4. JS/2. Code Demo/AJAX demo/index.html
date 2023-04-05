@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <title>Assignment</title>
+  </head>
+  <body>
+    <h1>Assignment</h1>
+    <hr />
+    <table>
+      <thead>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Price ($)</th>
+        <th>Brand</th>
+        <th>Image</th>
+        <th>Action</th>
+      </thead>
+      <tbody>
+        <!-- <tr>
+          <td>iPhone 9</td>
+          <td>An apple mobile which is nothing like apple</td>
+          <td>549</td>
+          <td>Apple</td>
+          <td>
+            <img src="https://i.dummyjson.com/data/products/1/1.jpg" />
+          </td>
+          <td>
+            <button id="btn-edit" onclick="handleEdit(this)">edit</button>
+            <button id="btn-remove" onclick="handleRemove(this)">remove</button>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr> -->
+      </tbody>
+      <tr class="Total-price">
+        <td colspan="3">Tổng tiền</td>
+        <td id="totalPrice"></td>
+      </tr>
+    </table>
+    <button class="btn-submit" type="submit" onclick="handleSubmit(this)">
+      Submit
+    </button>
+  </body>
+</html>

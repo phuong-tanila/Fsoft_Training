@@ -1,0 +1,55 @@
+table {
+  margin: 0 auto;
+  border: 0.5px dotted black;
+  border-collapse: collapse;
+  width: fit-content;
+}
+td {
+  border: 0.5px dotted black;
+  padding-left: 10px;
+  padding-right: 30px;
+  color: goldenrod;
+}
+th {
+  border: 0.5px dotted black;
+  text-align: left;
+  font-family: sans-serif;
+  font-size: 12px;
+  padding: 8px 3px;
+}
+td img {
+  width: 80px;
+}
+
+.input-quantity {
+  border: 0.5px dotted black;
+  padding: 2px 10px;
+  width: 25px;
+  margin: 0;
+}
+
+.btn-minus {
+  border: 0.5px dotted black;
+  padding: 2px 10px;
+  color: white;
+  background-color: gray;
+  margin: 0;
+}
+
+.btn-add {
+  border: 0.5px dotted black;
+  padding: 2px 10px;
+  background-color: rgb(194, 239, 239);
+  margin: 0;
+}
+.btn-cancel {
+  border: 0.5px dotted black;
+  padding: 2px 10px;
+  color: white;
+  background-color: red;
+  margin: 0;
+}
+
+.tfoot-total {
+  text-align: right;
+}

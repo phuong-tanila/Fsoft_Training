@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+
+	<context:annotation-config />
+	<context:component-scan
+		base-package="fa.training" />
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix">
+			<value>/WEB-INF/views/jsp/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>
+
+<!-- 
+<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+
+		<property name="locations">
+			<list>
+				<value>classpath:jdbc.properties</value>
+				<value>classpath:employee.properties</value>
+			</list>
+		</property>
+	</bean>
+	
+	<context:property-placeholder
+location="classpath:jdbc.properties, classpath:DBConfig.properties"
+ignore-unresolvable="true" />
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"
+			value="${driver}" />
+		<property name="url"
+			value="${url}" />
+		<property name="username" value="${username}" />
+		<property name="password" value="${password}" />
+	</bean>
+ -->
+
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"
+			value="com.mysql.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://149.28.19.248:3306/filmstore_dev?useSSL=false" />
+		<property name="username" value="quan" />
+		<property name="password" value="P@ssw0rd" />
+	</bean>
+
+	<tx:annotation-driven
+		transaction-manager="transactionManager" />
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="packagesToScan" value="fa.training.entities" />
+		<property name="hibernateProperties"
+			value="classpath:hibernate.properties" />
+	</bean>
+
+	<bean id="smallGlass" class="fa.training.entities.MyOtherGlass">
+		<constructor-arg name="volume" value="5" />
+		<constructor-arg name="maxVolume" value="10" />
+		<property name="largeGlass"
+			value="#{smallGlass.maxVolume ge 20 and smallGlass.maxVolume le 30}" />
+	</bean>
+
+	<bean id="largeGlass" class="fa.training.entities.MyOtherGlass">
+		<constructor-arg name="volume" value="5" />
+		<constructor-arg name="maxVolume" value="30" />
+		<property name="largeGlass"
+			value="#{largeGlass.maxVolume ge 20 and largeGlass.maxVolume le 30}" />
+	</bean>
+
+</beans>

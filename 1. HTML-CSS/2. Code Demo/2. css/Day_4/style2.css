@@ -1,0 +1,37 @@
+/* tô p1 p2 p3 */
+div p {
+  color: red;
+}
+
+/* tô p1, p2 */
+/* div > p {
+  color: red;
+} */
+
+/* tô p4 */
+/* div + p {
+  color: red;
+} */
+
+/* tô p4 p5 */
+/* div ~ p {
+  color: red;
+} */
+
+p:hover {
+  font-size: 20px;
+  color: yellow;
+}
+p::selection {
+  font-size: 90px;
+  color: blue;
+}
+input:required {
+  border-color: red;
+}
+input:hover {
+  border-color: yellow;
+}
+input:focus {
+  background-color: black;
+}
